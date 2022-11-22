@@ -3,15 +3,17 @@ import style from "./style.module.css";
 export default function MayTinhBoTui() {
   return (
     <div>
-      <h2 className="text-danger">BÀI TẬP CUỐI KHOÁ - ỨNG DỤNG MÁY TÍNH</h2>
+      <h2 className="text-danger mt-2">
+        BÀI TẬP CUỐI KHOÁ - ỨNG DỤNG MÁY TÍNH
+      </h2>
       <div
         className="container bg-light border border-info p-3"
-        style={{ width: "700px" }}
+        style={{ width: "300px" }}
       >
-        <p className="text-end border border-secondary bg-white p-1">
+        <p className="text-end border border-secondary border-2 bg-white p-1">
           <b>0</b>
         </p>
-        <div className="mt-2">
+        <div className={style.gridContainer}>
           <div className={style.gridItem}>
             <b>7</b>
           </div>
@@ -54,10 +56,10 @@ export default function MayTinhBoTui() {
           <div className={style.gridItem}>
             <b>-</b>
           </div>
-          <div className={style.gridItem}>
+          <div className={`${style.gridItemEqual} ${style.gridItem}`}>
             <b>=</b>
           </div>
-          <div className={style.gridItem}>
+          <div className={`${style.gridItemZero} ${style.gridItem}`}>
             <b>0</b>
           </div>
           <div className={style.gridItem}>

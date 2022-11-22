@@ -1,3 +1,25 @@
+.gridContainer {
+  margin-top: 20px;
+  display: grid;
+  gap: 10px 5px;
+  grid-template-columns: repeat(5, 1fr);
+}
 .gridItem {
-  color: red;
+  width: 45px;
+  padding: 10px;
+  background-color: rgb(217, 212, 212);
+  border: 2px solid gray;
+  cursor: pointer;
+}
+.gridItemEqual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 5;
+  grid-row: 3 / span 2;
+}
+.gridItemZero {
+  width: 99px;
+  grid-column: 1 / span 2;
+  grid-row: 4;
 }
