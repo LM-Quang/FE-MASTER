@@ -2,26 +2,6 @@ import React, { Component } from "react";
 import style from "./style.module.css";
 import key from "./DataKey.json";
 export default class MayTinhBoTui extends Component {
-  //   key = [
-  //     "7",
-  //     "8",
-  //     "9",
-  //     "/",
-  //     "CE",
-  //     "4",
-  //     "5",
-  //     "6",
-  //     "*",
-  //     "C",
-  //     "1",
-  //     "2",
-  //     "3",
-  //     "-",
-  //     "=",
-  //     "0",
-  //     ".",
-  //     "+",
-  //   ];
   state = {
     result: "0",
   };
