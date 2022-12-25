@@ -5,9 +5,12 @@ export default function NavPills(props) {
    const active = useSelector(
       (state) => state.DressingRoomReducer.activeButton
    );
+   const danhSachTab = useSelector(
+      (state) => state.DressingRoomReducer.danhSachTab
+   );
    const dispatch = useDispatch();
    const renderNavPills = () => {
-      return props.navPills.map((item, index) => {
+      return danhSachTab.map((item, index) => {
          return (
             <li className="nav-item" key={index}>
                <button

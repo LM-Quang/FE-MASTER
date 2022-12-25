@@ -1,6 +1,22 @@
 import React from "react";
-
+import { useSelector } from "react-redux";
 export default function NguoiMau() {
+   const danhSachSanPhamDuocChon = useSelector(
+      (state) => state.DressingRoomReducer.danhSachSanPhamDuocChon
+   );
+   const renderSanPhamDuocChon = () => {
+      return danhSachSanPhamDuocChon.map((sanPham, index) => {
+         return (
+            <div
+               key={index}
+               className={sanPham.type}
+               style={{
+                  backgroundImage: `url(${sanPham.imgSrc_png})`,
+               }}
+            />
+         );
+      });
+   };
    return (
       <div className="contain">
          <div
@@ -12,37 +28,28 @@ export default function NguoiMau() {
             style={{ backgroundImage: "url(./images/model/1000new.png)" }}
          />
          <div
-            className="hairstyle"
+            className="bikini_bra"
+            style={{ backgroundImage: "url(./images/allbody/bikini_bra.png)" }}
+         ></div>
+         <div
+            className="bikini_pants"
             style={{
-               backgroundImage: "url(./images/hairstyle/hairstyle2.png)",
+               backgroundImage: "url(./images/allbody/bikini_pants.png)",
             }}
-         />
+         ></div>
          <div
-            className="necklace"
-            style={{ backgroundImage: "url(./images/necklaces/necklace3.png)" }}
-         />
-         <div
-            className="bikinitop"
-            style={{ backgroundImage: "url(./images/clothes/topcloth3.png)" }}
-         />
-         <div
-            className="bikinibottom"
-            style={{ backgroundImage: "url(./images/clothes/botcloth4.png)" }}
-         />
-         <div
-            className="handbag"
-            style={{ backgroundImage: "url(./images/handbags/handbag3.png)" }}
-         />
-         <div
-            className="feet"
-            style={{ backgroundImage: "url(./images/shoes/shoes1.png)" }}
-         />
-         <div
-            className="background"
+            className="feet_high_left"
             style={{
-               backgroundImage: "url(./images/background/background1.jpg)",
+               backgroundImage: "url(./images/allbody/feet_high_left.png)",
             }}
-         />
+         ></div>
+         <div
+            className="feet_high_right"
+            style={{
+               backgroundImage: "url(./images/allbody/feet_high_right.png)",
+            }}
+         ></div>
+         {renderSanPhamDuocChon()}
       </div>
    );
 }

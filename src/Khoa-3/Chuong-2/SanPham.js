@@ -1,13 +1,24 @@
 import React from "react";
-
+import { useDispatch } from "react-redux";
 export default function SanPham(props) {
+   const dispatch = useDispatch();
+   const { thongTinSanPham } = props;
    return (
       <div className="card text-center">
-         <img src={props.thongTinSanPham.imgSrc_jpg} alt="dress" />
+         <img src={thongTinSanPham.imgSrc_jpg} alt="dress" />
          <h4>
-            <b>{props.thongTinSanPham.name}</b>
+            <b>{thongTinSanPham.name}</b>
          </h4>
-         <button>Thử đồ</button>
+         <button
+            onClick={() => {
+               dispatch({
+                  type: "CHON_SAN_PHAM",
+                  thongTinSanPham,
+               });
+            }}
+         >
+            Thử đồ
+         </button>
       </div>
    );
 }
